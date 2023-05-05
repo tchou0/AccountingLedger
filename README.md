@@ -16,7 +16,7 @@ For Deposit and Payment method, we will ask the user for the debit information a
 
 This will show all the entries that’s already in the csv file.
 
-I will have another menu for ledger showing all entries, Deposits, Payments, and reports.
+I will have another menu for ledger showing all the Entries, Deposits, Payments, and reports.
 
 ### 3. And last is Transaction class:
 
