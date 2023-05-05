@@ -10,8 +10,6 @@ public class Home {
     public static void main(String[] args) {
         homescreen();
     }
-
-
     public static void homescreen() {
         Scanner scanner = new Scanner(System.in);   //create scanner for user inputs
         //menu what the user will see
@@ -50,11 +48,11 @@ public class Home {
 
         System.out.println("\n======================== Your are now making a deposit =========================\n");
 
-        LocalDate date = LocalDate.now();       //right now date = 05-04-2023
+        LocalDate date = LocalDate.now();       //right now date = 05-05-2023
 
-        LocalTime time = LocalTime.now();   // variable time = time right now           //time now: 05:45:30.0439234234
+        LocalTime time = LocalTime.now();   // variable time = time right now           //time now: 02:45:30.0439234234
         DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");      //need to format time to be HH:mm:ss
-        String formattedtime = time.format(timeFormatter);      //example: 05:45:30
+        String formattedtime = time.format(timeFormatter);      //example: 02:45:30
 
         System.out.println("Enter description: ");
         String description = scanner.nextLine();
@@ -123,10 +121,8 @@ public class Home {
         scanner.close();
 
     }
-
 // If user choose 'L ' -------- Calling the showLedger()method from the ledger class
     public static void showLedger() {
         Ledger.showLedger();
     }
-
 }
