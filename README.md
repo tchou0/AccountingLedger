@@ -12,14 +12,14 @@ For example:
 
 For Deposit and Payment method, we will ask the user for the debit information and save it to the csv file.
 
-### Then we have the Ledger class:
+### 2. Then we have the Ledger class:
 
 This will show all the entries that’s already in the csv file.
 I will have another menu for ledger showing.
 
 All entries, Deposits, Payments, and reports.
 
-### And last is Transaction class:
+### 3. And last is Transaction class:
 
 This class is where I create my getters and my constructors so I can use it in the other classes.
 
