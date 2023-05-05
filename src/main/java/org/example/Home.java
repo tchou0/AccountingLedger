@@ -46,7 +46,6 @@ public class Home {
         scanner.close();
     }
 
-
     public static void makeADeposit(){   // using Scanner to get user's input and storing it in a corresponding variable
         Scanner scanner = new Scanner(System.in);
 
@@ -54,7 +53,7 @@ public class Home {
 
         LocalDate date = LocalDate.now();       //right now date = 05-04-2023
 
-        LocalTime time = LocalTime.now();   // variable time = time right now       time now: 05:45:30.0439234234
+        LocalTime time = LocalTime.now();   // variable time = time right now           //time now: 05:45:30.0439234234
         DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss");      //need to format time to be HH:mm:ss
         String formattedtime = time.format(timeFormatter);      //example: 05:45:30
 
@@ -92,7 +91,6 @@ public class Home {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("\n======================== Your are now making a payment =========================\n");
-
 
         LocalDate date = LocalDate.now();   //get today's date
 

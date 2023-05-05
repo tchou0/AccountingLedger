@@ -92,7 +92,7 @@ public class Ledger {
 
 
 // =================================== SHOW ALL ENTRIES ===================================
-
+// If user choose  'A'
     public static void showEntries() {
         System.out.println("\n======================== All Entries to Date =========================\n");
         for (Transaction item : transactions) {
@@ -105,7 +105,7 @@ public class Ledger {
 
 
 // =============================== SHOW DEPOSIT ENTRIES ===============================
-
+// If user choose  'D'
     public static void showDepositedEntries() {
         System.out.println("\n======================== DEPOSIT HISTORY =========================\n");
         for (Transaction item : transactions) { // loop through each transaction object(item in the transactionlist
@@ -119,10 +119,8 @@ public class Ledger {
         showLedger();
     }
 
-
-
 // ========================================= SHOW PAYMENT ENTRIES =================================
-
+// If user choose  'P'
     public static void showPaymentEntries() {
         System.out.println("\n======================== PAYMENT HISTORY =========================\n");
         for (Transaction item : transactions) { // loop through each transaction object(item in the transactionlist
@@ -141,7 +139,7 @@ public class Ledger {
 
 
 //================================== REPORTS MENU =========================================
-
+//  If user choose  'R'
     public static void reportsMenu() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("\n======================== REPORTS MENU =========================\n");
@@ -189,7 +187,7 @@ public class Ledger {
 
 
     // ==============================REPORTS SECTION===========================
-
+// If user choose  ' 1 '
     public static void monthToDate() {
 
         System.out.println("\n============= MONTH TO DATE REPORT (5/1/2023 - 5/5/2023) ======================\n");
@@ -215,7 +213,7 @@ public class Ledger {
 
         }
     }
-
+// If user choose  ' 2 '
     public static void previousMonth() {
 
         System.out.println("\n============= PREVIOUS MONTHS REPORT (4/1/2023 - 4/30/2023) ======================\n");
@@ -239,7 +237,7 @@ public class Ledger {
             }
         }
     }
-
+// If user choose  ' 3 '
     public static void yearToDate() {
         System.out.println("\n===============YEAR TO DATE REPORT (1/1/2023 - 5/5/2023)====================\n");
 
@@ -262,7 +260,7 @@ public class Ledger {
         }
 
     }
-
+// If user choose  ' 4 '
     public static void previousYear() {
         System.out.println("\n============= PREVIOUS YEARS REPORT (1/1/2022 - 12/31/2022)=====================\n");
 
@@ -284,7 +282,7 @@ public class Ledger {
         }
 
     }
-
+// If user choose  ' 5 '
     public static void searchByVendor(String vendorName) {
         System.out.println("\n===================== SEARCH BY VENDOR REPORT ======================\n");
 
@@ -296,7 +294,6 @@ public class Ledger {
                         item.getDate(), item.getTime(), item.getDescription(), item.getVendor(), item.getAmount());
             }
         }
-
     }
 
 }
