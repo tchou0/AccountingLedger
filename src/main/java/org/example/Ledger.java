@@ -1,5 +1,4 @@
 package org.example;
-
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,14 +7,12 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Scanner;
-
 public class Ledger {
     // initialization an arrayList which holds transaction objects and calling it
     public static ArrayList<Transaction> transactions = getTransactions();
-
-    public static ArrayList<Transaction> getTransactions() { // Declaring a method called getTransactions
+    public static ArrayList<Transaction> getTransactions() {  // Declaring a method called getTransactions
         // of the type arrayList that holds transactions objects
-        ArrayList<Transaction> transactions = new ArrayList<>(); // making a new arraylist
+        ArrayList<Transaction> transactions = new ArrayList<>();  // making a new arraylist
 
         // this method loads transaction objects into transactions array
         try {// we're creating file-reader and buffer reader and passing the transaction.csv
@@ -25,7 +22,7 @@ public class Ledger {
             BufferedReader bufReader = new BufferedReader(fileReader);
 
             String input;
-            while ((input = bufReader.readLine()) != null) { //check ALL items until there's no more
+            while ((input = bufReader.readLine()) != null) {  //check ALL items until there's no more
                 if (!input.isEmpty()) { // skip empty lines
                     String[] parts = input.split("\\|");
                     LocalDate date = LocalDate.parse(parts[0]);
@@ -42,7 +39,7 @@ public class Ledger {
             System.out.println("File not found!");
             System.exit(0);
         }
-        // Sort our transactions ArrayList in decscending order before returning it
+        // Sort our transactions ArrayList in descending order before returning it
         Comparator<Transaction> compareByDate = Comparator.comparing(Transaction::getDate).reversed();
         Comparator<Transaction> compareByTime = Comparator.comparing(Transaction::getTime).reversed();
         Comparator<Transaction> compareByDateTime = compareByDate.thenComparing(compareByTime);
@@ -51,7 +48,7 @@ public class Ledger {
         // we're returning the transcations array list to our method
         return transactions;
     }
-// =================================== LEDGER MENU ======================================
+// ==================================== LEDGER MENU =========================================
     public static void showLedger() {
 
         Scanner scanner = new Scanner(System.in);
@@ -84,7 +81,7 @@ public class Ledger {
         }
         scanner.close();
     }
-// =================================== SHOW ALL ENTRIES ===================================
+// ================================== SHOW ALL ENTRIES ======================================
 // If user choose  'A'
     public static void showEntries() {
         System.out.println("\n======================== All Entries to Date =========================\n");
@@ -94,7 +91,7 @@ public class Ledger {
         }
         showLedger();
     }
-// =============================== SHOW DEPOSIT ENTRIES ==================================
+// =============================== SHOW DEPOSIT ENTRIES =====================================
 // If user choose  'D'
     public static void showDepositedEntries() {
         System.out.println("\n======================== DEPOSIT HISTORY =========================\n");
@@ -108,7 +105,7 @@ public class Ledger {
         }
         showLedger();
     }
-// ==================================== SHOW PAYMENT ENTRIES =================================
+// =============================== SHOW PAYMENT ENTRIES =====================================
 // If user choose  'P'
     public static void showPaymentEntries() {
         System.out.println("\n======================== PAYMENT HISTORY =========================\n");
@@ -124,8 +121,8 @@ public class Ledger {
         // After showing all payments(money spent), we show the main menu again
         showLedger();
     }
-//================================== REPORTS MENU =========================================
-//  If user choose  'R'
+// ================================= REPORTS SECTION =========================================
+//  If user choose 'R'
     public static void reportsMenu() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("\n======================== REPORTS MENU =========================\n");
@@ -168,7 +165,6 @@ public class Ledger {
         showLedger();
         scanner.close();
     }
-    // ==============================REPORTS SECTION===============================
 // If user choose  ' 1 '
     public static void monthToDate() {
 
@@ -223,7 +219,6 @@ public class Ledger {
     public static void yearToDate() {
         System.out.println("\n===============YEAR TO DATE REPORT (1/1/2023 - 5/5/2023)====================\n");
 
-
         // loop through each item in the list
         for (Transaction item : transactions) {
             // make the dates into a string to get the values
@@ -240,7 +235,6 @@ public class Ledger {
                         item.getDate(), item.getTime(), item.getDescription(), item.getVendor(), item.getAmount());
             }
         }
-
     }
 // If user choose  ' 4 '
     public static void previousYear() {
@@ -262,7 +256,6 @@ public class Ledger {
                         item.getDate(), item.getTime(), item.getDescription(), item.getVendor(), item.getAmount());
             }
         }
-
     }
 // If user choose  ' 5 '
     public static void searchByVendor(String vendorName) {
@@ -277,5 +270,4 @@ public class Ledger {
             }
         }
     }
-
 }
