@@ -20,7 +20,7 @@ I will have another menu for ledger showing all the Entries, Deposits, Payments,
 
 ### 3. And last is Transaction class:
 
-This class is where I create my getters and my constructors, so I can use them in the other classes.
+This class is where I create my getters and my constructor, so I can use them in the other classes.
 
 #### One interesting piece of code from my project:
 
