@@ -42,7 +42,6 @@ public class Ledger {
             System.out.println("File not found!");
             System.exit(0);
         }
-
         // Sort our transactions ArrayList in decscending order before returning it
         Comparator<Transaction> compareByDate = Comparator.comparing(Transaction::getDate).reversed();
         Comparator<Transaction> compareByTime = Comparator.comparing(Transaction::getTime).reversed();
@@ -51,11 +50,8 @@ public class Ledger {
         transactions.sort(compareByDateTime.thenComparing(compareByDateTime));
         // we're returning the transcations array list to our method
         return transactions;
-
     }
-
-// ================================= LEDGER MENU =================================
-
+// =================================== LEDGER MENU ======================================
     public static void showLedger() {
 
         Scanner scanner = new Scanner(System.in);
@@ -88,9 +84,6 @@ public class Ledger {
         }
         scanner.close();
     }
-
-
-
 // =================================== SHOW ALL ENTRIES ===================================
 // If user choose  'A'
     public static void showEntries() {
@@ -101,10 +94,7 @@ public class Ledger {
         }
         showLedger();
     }
-
-
-
-// =============================== SHOW DEPOSIT ENTRIES ===============================
+// =============================== SHOW DEPOSIT ENTRIES ==================================
 // If user choose  'D'
     public static void showDepositedEntries() {
         System.out.println("\n======================== DEPOSIT HISTORY =========================\n");
@@ -118,8 +108,7 @@ public class Ledger {
         }
         showLedger();
     }
-
-// ========================================= SHOW PAYMENT ENTRIES =================================
+// ==================================== SHOW PAYMENT ENTRIES =================================
 // If user choose  'P'
     public static void showPaymentEntries() {
         System.out.println("\n======================== PAYMENT HISTORY =========================\n");
@@ -135,9 +124,6 @@ public class Ledger {
         // After showing all payments(money spent), we show the main menu again
         showLedger();
     }
-
-
-
 //================================== REPORTS MENU =========================================
 //  If user choose  'R'
     public static void reportsMenu() {
@@ -179,14 +165,10 @@ public class Ledger {
                 System.out.println("\nPlease type the correct option");
                 break;
         }
-
         showLedger();
         scanner.close();
     }
-
-
-
-    // ==============================REPORTS SECTION===========================
+    // ==============================REPORTS SECTION===============================
 // If user choose  ' 1 '
     public static void monthToDate() {
 

@@ -14,7 +14,6 @@ public class Home {
 
     public static void homescreen() {
         Scanner scanner = new Scanner(System.in);   //create scanner for user inputs
-
         //menu what the user will see
         System.out.println("\n======================== Welcome! MAIN MENU =========================\n");
         System.out.println("[D] - Add Deposit");
@@ -45,7 +44,7 @@ public class Home {
         }
         scanner.close();
     }
-
+// If user choose  'D'
     public static void makeADeposit(){   // using Scanner to get user's input and storing it in a corresponding variable
         Scanner scanner = new Scanner(System.in);
 
@@ -85,8 +84,7 @@ public class Home {
         homescreen();
         scanner.close();
     }
-
-
+// If user choose  'P'
     public static void makeAPayment() {                 //using Scanner to get user's input and storing it in the corresponding variable
         Scanner scanner = new Scanner(System.in);
 
@@ -126,7 +124,7 @@ public class Home {
 
     }
 
-    //Calling the showLedger()method from the ledger class
+// If user choose 'L ' -------- Calling the showLedger()method from the ledger class
     public static void showLedger() {
         Ledger.showLedger();
     }
